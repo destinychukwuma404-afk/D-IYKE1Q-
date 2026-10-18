@@ -1,0 +1,650 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --txt-color: #222;
+  --bg-color: #f4f4f4;
+  --accent-1: #036701;
+  --accent-2: #c8e7d1;
+}
+
+body {
+  color: var(--txt-color);
+  background-color: var(--bg-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+header {
+  padding: 2em 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--accent-2);
+}
+
+header h1 {
+  color: var(--accent-1);
+  font-size: 4em;
+}
+
+header button {
+  background: none;
+  border: none;
+}
+
+header button span {
+  background-color: var(--accent-1);
+  padding: 15px;
+  font-size: 1.8em;
+  border-radius: 20px;
+  color: #fff;
+}
+
+/* UTILITY CLASSES */
+
+h1 {
+  font-weight: bolder;
+}
+
+h2 {
+  font-weight: 550;
+  font-size: 2.5em;
+}
+
+h3 {
+  font-weight: 450;
+}
+
+section {
+  background-image: linear-gradient(135deg, var(--accent-2), var(--bg-color));
+  height: 100vh;
+  overflow: auto;
+}
+
+section h1 {
+  color: var(--accent-1);
+  text-shadow: 3px 2px 4px #999;
+}
+/* may come in handy in some elements */
+/* END OF UTILITY CLASSES */
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  padding: 2em 4em;
+  background-color: inherit;
+  box-shadow: 0 1px 2px #999;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+  margin: auto;
+}
+
+nav ul li {
+  margin: 0px 5px;
+  font-size: 1.8em;
+  font-weight: 450;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: var(--accent-1);
+  padding: 15px;
+  background-color: var(--accent-2);
+  border-radius: 10px;
+  /* transition: all 0.5s;*/
+  cursor: none;
+}
+
+nav ul a:active {
+  background-color: var(--accent-1);
+  color: var(--accent-2);
+  transform: scale(0.95);
+}
+/* END OF NAV STYLES */
+
+/* This is for the main contents */
+
+/* HOME */
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HERO SECTION */
+#home .hero-section {
+  padding-bottom: 2.5em;
+  text-align: center;
+  margin: 1em;
+}
+
+#home .hero-section .hero-paragraph {
+  text-transform: uppercase;
+  color: var(--accent-1);
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+.hero-section .hero {
+  color: currentColor;
+  font-size: 5.5em;
+  font-family: "Bookman old style", serif;
+  line-height: 1em;
+}
+
+.hero-section .hero span {
+  color: var(--accent-1);
+}
+
+.hero-section .hero-footer {
+  font-size: 1.2em;
+  color: #555;
+  margin: 10px;
+}
+/* END OF HERO SECTION */
+
+/* EXPLORE BUTTONS */
+.explore-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.explore-button button {
+  padding: 20px 25px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin: 0.5em 2em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.explore-button button:first-child {
+  background-color: var(--accent-1);
+  color: var(--bg-color);
+  border: 1px solid var(--accent-1);
+}
+
+.explore-button button:last-child {
+  background-color: var(--accent-2);
+  color: var(--accent-1);
+  border: 1px solid var(--accent-1);
+}
+/* END OF EXPLORE */
+
+/* END OF HOME */
+
+/* WORK */
+/*#work{
+  
+}*/
+
+/* WORK HEAD */
+#work .work-head {
+  background-color: var(--bg-color);
+  padding: 1.8em;
+}
+
+.work-head h1 {
+  font-size: 4em;
+  text-shadow: 2p;
+}
+
+.work-head p {
+  font-style: 1.2em;
+  color: #555;
+}
+/* END OF WORK HEAD */
+
+/* WORK CONTENT */
+#work .work-content {
+  padding: 5px;
+}
+
+/* WORK UTILITIES */
+.work-content h2 {
+  padding: 0.8em;
+  font-size: 2.5em;
+}
+
+.work-content .card {
+  border: 1px solid #999;
+  margin: 1em 5px;
+  padding: 0.8em;
+  border-radius: 10px;
+  text-align: left;
+  background-color: var(--accent-2);
+  box-shadow: 3px 2px 2px #999;
+  overflow-y: hidden;
+}
+
+.work-content .card img {
+  float: left;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #999;
+  margin: 5px 2em;
+  margin-left: 0;
+  border-radius: 10px;
+}
+/* END OF WORK UTILITIES */
+
+/* CODE WORKS */
+.work-content .code-works {
+  display: flex;
+  flex-direction: column;
+}
+
+.code-works .card h3 {
+  font-size: 2em;
+  margin: 5px 0px;
+}
+
+.code-works .card p {
+  color: #555;
+  font-size: 1.2em;
+}
+/* END OF CODE WORKS */
+
+/* DESIGN WORKS */
+.work-content .design-work {
+  display: flex;
+  flex-direction: column;
+}
+
+.design-work .card h3 {
+  font-size: 2em;
+  font-style: italic;
+  margin: 7px 0px;
+}
+
+.design-work .card p {
+  color: #555;
+  font-size: 1.5em;
+}
+/* END OF DESIGN WORK */
+/* END OF WORK CONTENTS */
+
+/* END OF WORKS */
+
+/* ABOUT */
+/*#about{
+  transform: scale();
+}*/
+
+/* ABOUT HEAD */
+#about .about-head {
+  padding: 2em;
+  background-color: var(--bg-color);
+}
+
+.about-head h1 {
+  font-size: 4em;
+  margin: 5px;
+}
+
+.about-head p {
+  font-size: 1.2em;
+  color: #555;
+}
+/* END OF ABOUT HEAD */
+
+/* ABOUT NAV */
+#about .about-nav {
+  padding: 1.2em;
+  background: none;
+  position: sticky;
+  top: 15%;
+  backdrop-filter: blur(1px);
+}
+
+.about-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+}
+
+.about-nav ul li {
+  margin: 0.5em 2em;
+}
+
+.about-nav ul a {
+  padding: 10px;
+  color: var(--accent-1);
+  background-color: var(--bg-color);
+  box-shadow: 0 0 2px #999;
+  border-radius: 10px;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+/* END OF ABOUT NAV */
+
+/*  ABOUT UTILITIES */
+#about h2 {
+  margin: 0.8em;
+  font-size: 2em;
+  color: #555;
+  text-shadow: 1px 1px 1px #aaa;
+}
+
+#about h3 {
+  margin: 0.5em;
+  font-size: 1.5em;
+}
+/* END OF ABOUT UTILITIES */
+
+/* MESSAGE */
+#about .message {
+  padding: 10px;
+}
+
+.message-content .message-card {
+  /*border: 1px solid #999;*/
+  box-shadow: 0 0 5px #999;
+  padding: 20px;
+  margin: 1.2em 0.5em;
+  border-radius: 3px;
+}
+
+.message-content .message-card p {
+  color: #555;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+/* END OF MESSAGE */
+
+/* FAQ */
+#about .faqs {
+  padding: 10px;
+}
+
+/* FAQ UTILITIES */
+.faqs p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.5em;
+  padding: 10px;
+}
+/* END OF FAQ UTILITIES */
+
+.faq-content .faq-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 10px;
+  font-size: 1em;
+  border-bottom: 1px solid #999;
+}
+
+.faq-content .faq-card button {
+  border: none;
+  color: var(--bg-color);
+  background-color: var(--accent-1);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.faq-content .faq-card button:active {
+  box-shadow: 0 0 2px #999;
+  transform: scale(0.9);
+}
+/* END OF FAQ */
+
+/* CONTACT */
+#about .contacts {
+  padding: 10px;
+}
+
+.contacts .contact-card {
+  padding: 20px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin: 2em 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contacts .contact-card:active {
+  transform: scale(0.95);
+}
+
+.contacts .contact-card p {
+  font-size: 1.8em;
+  color: #555555 !important;
+}
+
+.contacts .contact-card img {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #999;
+}
+/* END OF CONTACT */
+
+/* The main contents code ends here */
+
+/* FOOTER */
+footer {
+  padding: 1.5em 10px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 1.6em;
+  color: #555;
+}
+/* END OF FOOTER */
+
+/* MEDIA QUERYS */
+
+/* FOR A TABLETS & LAPTOP SCREENS */
+@media (min-width: 860px) {
+  /* HEADER */
+  header h1 {
+    font-size: 6em;
+  }
+
+  header button span {
+    padding: 20px;
+    font-size: 2em;
+  }
+
+  /* NAV */
+  nav {
+    padding: 3em 5em;
+  }
+
+  nav ul {
+    justify-content: space-evenly;
+    margin: auto;
+  }
+
+  nav ul li {
+    font-size: 2em;
+  }
+
+  nav ul a {
+    padding: 20px;
+  }
+
+  /* HOME */
+  #home .hero-section {
+    padding-bottom: 3em;
+    margin: 1.8em;
+  }
+
+  .hero-section .hero-paragraph {
+    font-size: 2.2em;
+  }
+
+  .hero-section .hero {
+    font-size: 7em;
+    line-height: 2em;
+  }
+
+  .hero-section .hero-footer {
+    font-size: 2em;
+  }
+
+  .explore-button button {
+    font-size: 1.8em;
+  }
+
+  /* WORK */
+  #work .work-head {
+    padding: 2em;
+  }
+
+  .work-head h1 {
+    font-size: 5em;
+  }
+
+  .work-head p {
+    font-size: 1.8em;
+  }
+
+  #work .work-content {
+    padding: 15px;
+  }
+
+  .work-content h2 {
+    font-size: 3em;
+    padding: 1em;
+  }
+
+  .work-content .code-works > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .code-works .card {
+    margin: 1em;
+    padding: 1em;
+  }
+
+  .code-works .card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .code-works .card h3 {
+    font-size: 2.5em;
+  }
+
+  .code-works .card p {
+    font-size: 1.8em;
+  }
+
+  .work-content .design-work > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .design-work .card {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    padding: 1em;
+  }
+
+  .design-work .card img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .design-work .card h3 {
+    font-size: 2.5em;
+  }
+
+  .design-work .card p {
+    font-size: 1.5em;
+  }
+
+  /* ABOUT */
+  #about .about-head {
+    padding: 2em;
+  }
+
+  .about-head h1 {
+    font-size: 5em;
+  }
+
+  .about-head p {
+    font-size: 1.8em;
+  }
+
+  .about-nav ul a {
+    font-size: 1.8em;
+    padding: 12px;
+  }
+
+  /* ABOUT UTILITIES */
+  #about h3 {
+    font-size: 2.5em;
+  }
+
+  #about h2 {
+    margin: 1em;
+    font-size: 3em;
+  }
+
+  /*  END OF UTILITIES */
+
+  #about .about-nav {
+    top: 10%;
+  }
+
+  .message .message-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .message-content .message-card p {
+    font-size: 1.8em;
+  }
+
+  /* FAQS */
+  .faqs p {
+    font-size: 1.8em;
+  }
+
+  .faq-card button {
+    font-size: 1.5em;
+  }
+
+  .contacts > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contacts .contact-card {
+    margin: 1.5em;
+  }
+
+  .contacts .contact-card p {
+    font-size: 2.2em;
+  }
+
+  /* UTILITY CLASSES */
+
+  section {
+    background-image: linear-gradient(135deg, var(--accent-2), var(--bg-color), var(--accent-2));
+  }
+}
+
+/* END OF MEDIA QUERIES */
+
+/* Here we come to the end of the styling.
+Our next step is the responsivity */
